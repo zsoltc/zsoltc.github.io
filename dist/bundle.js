@@ -80,9 +80,11 @@ camera.position.z = 4.5;
 
 var geometry = new THREE.BoxGeometry(2, 2, 2);
 var materials = [1, 6, 2, 5, 3, 4].map((x) => new THREE.MeshPhongMaterial({
-    map: texLoader.load('assets/d' + x + '.png'),
+    map: texLoader.load('assets/d' + (window.alternative ? 'a' : '') + x + '.png'),
     bumpMap: texLoader.load('assets/bump.jpg'),
     bumpScale: 0.005,
+    shininess: window.alternative ? 0 : 30,
+    color: window.alternative ? 0xcccccc : 0xffffff,
 }));
 var cube = new THREE.Mesh(geometry, materials);
 scene.add(cube);
