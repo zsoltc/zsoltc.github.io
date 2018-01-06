@@ -77,7 +77,7 @@ var alternative = getParameterByName('alternative');
 
 renderer.setSize(width, height);
 document.querySelector('#container').appendChild(renderer.domElement);
-camera.position.z = 4.5;
+camera.position.z = 3;
 
 var geometry = new THREE.BoxGeometry(2, 2, 2);
 var materials = [1, 6, 2, 5, 3, 4].map((x) => new THREE.MeshPhongMaterial({
@@ -141,6 +141,8 @@ document.querySelector('#container').addEventListener('mouseup', (event) => {
             cube.rotation.y = rot.y;
         })
         .start();
+    
+    document.querySelector('#title').className = 'hidden';
 });
 
 (function () {
