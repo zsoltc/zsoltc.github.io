@@ -73,6 +73,7 @@ var texLoader = new THREE.TextureLoader();
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({ antialias: true });
+var alternative = getParameterByName('alternative');
 
 renderer.setSize(width, height);
 document.querySelector('#container').appendChild(renderer.domElement);
@@ -80,11 +81,11 @@ camera.position.z = 4.5;
 
 var geometry = new THREE.BoxGeometry(2, 2, 2);
 var materials = [1, 6, 2, 5, 3, 4].map((x) => new THREE.MeshPhongMaterial({
-    map: texLoader.load('assets/d' + (window.alternative ? 'a' : '') + x + '.png'),
-    bumpMap: texLoader.load('assets/bump.jpg'),
+    map: texLoader.load(window.images['d' + (alternative ? 'a' : '') + x]),
+    bumpMap: texLoader.load(window.images.bump),
     bumpScale: 0.005,
-    shininess: window.alternative ? 0 : 30,
-    color: window.alternative ? 0xcccccc : 0xffffff,
+    shininess: alternative ? 0 : 30,
+    color: alternative ? 0xcccccc : 0xffffff,
 }));
 var cube = new THREE.Mesh(geometry, materials);
 scene.add(cube);
@@ -182,6 +183,16 @@ var animate = function (t) {
 };
 
 requestAnimationFrame(animate);
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 
 /***/ })
