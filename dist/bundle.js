@@ -71,13 +71,13 @@ var width = Math.min(window.innerWidth, window.innerHeight);
 var height = width;
 var texLoader = new THREE.TextureLoader();
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({ antialias: true });
 var alternative = getParameterByName('alternative');
 
 renderer.setSize(width, height);
 document.querySelector('#container').appendChild(renderer.domElement);
-camera.position.z = 3;
+camera.position.z = 5;
 
 var geometry = new THREE.BoxGeometry(2, 2, 2);
 var materials = [1, 6, 2, 5, 3, 4].map((x) => new THREE.MeshPhongMaterial({
@@ -129,16 +129,16 @@ document.querySelector('#container').addEventListener('mouseup', (event) => {
     var periodX = (Math.floor(Math.random() * 2) + 2) * Math.sign(Math.random() - 0.5);
     var periodY = (Math.floor(Math.random() * 2) + 2) * Math.sign(Math.random() - 0.5);
 
-    var rot = { x: 0, y: 0 };
-    var tween = new TWEEN.Tween(rot)
+    var params = { xrot: 0, yrot: 0, };
+    var tween = new TWEEN.Tween(params)
         .to({
-            x: rotUnit * (rots[number].x + 4 * periodX),
-            y: rotUnit * (rots[number].y + 4 * periodY),
+            xrot: rotUnit * (rots[number].x + 4 * periodX),
+            yrot: rotUnit * (rots[number].y + 4 * periodY),
         }, 5000)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(() => {
-            cube.rotation.x = rot.x;
-            cube.rotation.y = rot.y;
+            cube.rotation.x = params.xrot;
+            cube.rotation.y = params.yrot;
         })
         .start();
     
