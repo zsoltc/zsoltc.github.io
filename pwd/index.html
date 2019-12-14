@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Manager</title>
+    <style>
+      main {
+        max-width: 600px;
+        font-family: sans-serif;
+      }
+
+      #entries {
+        display: grid;
+        grid-template-columns: min-content repeat(2, auto) min-content;
+        grid-gap: 10px;
+        margin: 10px 0 10px 0;
+        font-size: 20px;
+      }
+
+      button {
+        all: unset;
+        padding: 0 10px 0 10px;
+        background-color: #e0e0e0;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      input {
+        all: unset;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>Copy encrypted DB to clipboard; enter password; hit ENTER</div>
+      <input type="password" id="password-input" placeholder="Password" autofocus />
+      <div id="entries"></div>
+      <div id="new-entry">
+        <input type="text" placeholder="domain" />
+        <input type="text" placeholder="user" />
+        <input type="text" placeholder="password" />
+        <button>+</button>
+      </div>
+      <br />
+      <button id="save">Save and copy to clipboard</button>
+    </main>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
