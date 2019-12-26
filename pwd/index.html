@@ -5,44 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Manager</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="colors.css" />
     <style>
-      main {
-        max-width: 600px;
-        font-family: monospace;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
       }
 
-      #entries {
-        display: grid;
-        grid-template-columns: min-content repeat(2, auto) min-content;
-        grid-gap: 10px;
-        margin: 10px 0 10px 0;
-        font-size: 20px;
+      body {
+        margin: 0.5rem;
+        max-width: 640px;
+      }
+
+      button,
+      input {
+        padding: 0.5rem 1rem;
+        border-radius: 0.125rem;
+        border: 0;
       }
 
       button {
-        all: unset;
-        padding: 0 10px 0 10px;
-        background-color: #e0e0e0;
-        text-align: center;
+        background: var(--md-grey-300);
         cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      button:focus {
+        outline: unset;
       }
 
       input {
-        all: unset;
-        border: 1px solid #000;
+        background: var(--md-grey-100);
+      }
+
+      button:hover {
+        background: var(--md-grey-400);
+      }
+
+      #entries {
+        margin: 1rem 0;
+      }
+
+      #entries > div:hover {
+        background: var(--md-green-50);
+      }
+
+      #new-entry input {
+        width: 100%;
+        margin-bottom: 0.25rem;
       }
     </style>
   </head>
   <body>
     <main>
-      <div>Copy encrypted DB to clipboard; enter password; hit ENTER</div>
-      <input type="password" id="password-input" placeholder="Password" autofocus />
+      <div style="margin-bottom: 0.5rem;">
+        copy encrypted DB to clipboard; enter password; hit ENTER
+      </div>
+      <input
+        type="password"
+        id="password-input"
+        placeholder="db password"
+        style="width: 100%;"
+        autofocus
+      />
       <div id="entries"></div>
       <div id="new-entry">
         <input type="text" placeholder="domain" />
+        <input type="text" placeholder="url" />
         <input type="text" placeholder="user" />
         <input type="text" placeholder="password" />
-        <button>+</button>
+        <button>Add</button
       </div>
       <br />
       <button id="save">Save and copy to clipboard</button>
