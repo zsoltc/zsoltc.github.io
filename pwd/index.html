@@ -17,8 +17,9 @@
       }
 
       body {
-        margin: 0.5rem;
+        padding: 0.5rem;
         max-width: 640px;
+        background: var(--md-grey-200);
       }
 
       button,
@@ -29,9 +30,14 @@
       }
 
       button {
-        background: var(--md-grey-300);
+        background: var(--md-indigo-700);
+        color: var(--md-white);
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+      }
+
+      button:hover {
+        background: var(--md-indigo-900);
       }
 
       button:focus {
@@ -39,11 +45,7 @@
       }
 
       input {
-        background: var(--md-grey-100);
-      }
-
-      button:hover {
-        background: var(--md-grey-400);
+        border: 1px solid var(--md-grey-500);
       }
 
       #entries {
@@ -51,7 +53,7 @@
       }
 
       #entries > div:hover {
-        background: var(--md-green-50);
+        background: var(--md-green-100);
       }
 
       #new-entry input {
