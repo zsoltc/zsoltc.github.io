@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="colors.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      #c1 {
+        border-radius: 0.25rem;
+        outline: none;
+      }
+
+      #btn-shuffle {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+        border: 0;
+        border-radius: 0.25rem;
+        font-size: 2rem;
+        outline: none;
+        cursor: pointer;
+        background-color: var(--md-orange-200);
+        color: #000;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #btn-shuffle.shuffling {
+        background-color: var(--md-orange-a700);
+        color: #fff;
+      }
+
+      #notification {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.5rem;
+        font-size: 4rem;
+        border-radius: 0.25rem;
+        color: #fff;
+        background-color: #000;
+        opacity: 0;
+        z-index: -1;
+        text-align: center;
+        cursor: default;
+        transition: opacity 0.2s ease-in-out;
+      }
+    </style>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+  </head>
+  <body>
+    <div style="display: inline-block; position: relative;">
+      <canvas id="c1" touch-action="none"></canvas>
+      <button id="btn-shuffle">Shuffle</button>
+      <div id="notification">Finished!</div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
