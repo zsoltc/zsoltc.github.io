@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
+  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Roll dice</title>
 
     <style>
-        html,
-        body {
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+      html,
+      body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-        #container {
-            display: inline-block;
-            position: relative;
-        }
+      #container {
+        display: inline-block;
+        position: relative;
+      }
 
-        #title {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 10px;
-            border-radius: 5px;
-            background-color: black;
-            opacity: 0.8;
-            text-align: center;
-            color: white;
-            font-family: sans-serif;
-            font-size: 4em;
-            cursor: default;
-            user-select: none;
-            transition: opacity 0.3s;
-        }
-        
-        #title.hidden {
-            opacity: 0;
-        }
+      #title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        border-radius: 5px;
+        background-color: black;
+        opacity: 0.8;
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        font-size: 4em;
+        cursor: default;
+        user-select: none;
+        transition: opacity 0.3s;
+      }
+
+      #title.hidden {
+        opacity: 0;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <div id="title">Click to roll dice</div>
+      <div id="title">Click to roll dice</div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.5.0/Tween.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.4.0/Tween.min.js"></script>
     <script src="init.js"></script>
     <script src="bundle.js"></script>
-</body>
-
+  </body>
 </html>
