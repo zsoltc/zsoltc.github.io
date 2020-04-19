@@ -74,6 +74,7 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({ antialias: true });
 var alternative = getParameterByName('alt');
+var animating = false;
 
 renderer.setSize(width, height);
 document.querySelector('#container').appendChild(renderer.domElement);
@@ -123,6 +124,12 @@ var rots = [ null,
 ];
 
 document.querySelector('#container').addEventListener('mouseup', (event) => {
+    if (animating) {
+        return;    
+    }
+    
+    animating = true;
+    
     var number = Math.floor(Math.random() * 6) + 1;
     console.log(number);
     
@@ -139,6 +146,9 @@ document.querySelector('#container').addEventListener('mouseup', (event) => {
         .onUpdate(() => {
             cube.rotation.x = params.xrot;
             cube.rotation.y = params.yrot;
+        })
+        .onComplete(() => {
+            animating = false;
         })
         .start();
     
