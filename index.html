@@ -1,58 +1,84 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Roll dice</title>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typescript.hu</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="colors.css" />
     <style>
-        html,
-        body {
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
 
-        #container {
-            display: inline-block;
-            position: relative;
-        }
-
-        #title {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 10px;
-            border-radius: 5px;
-            background-color: black;
-            opacity: 0.8;
-            text-align: center;
-            color: white;
-            font-family: sans-serif;
-            font-size: 4em;
-            cursor: default;
-            user-select: none;
-            transition: opacity 0.3s;
-        }
-        
-        #title.hidden {
-            opacity: 0;
-        }
+      .link-4 {
+        text-decoration: none;
+        color: #797878;
+        margin: 0 20px;
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        transition: ease-out 0.3s;
+      }
+      .link-4 span::before {
+        width: 100%;
+        height: 2px;
+        background: white;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        transition: 0.3s;
+      }
+      .link-4 span::after {
+        width: 100%;
+        height: 2px;
+        background: white;
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%);
+        transition: 0.3s;
+      }
+      .link-4::before {
+        width: 2px;
+        height: 100%;
+        background: white;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(100%);
+        transition: 0.3s;
+      }
+      .link-4::after {
+        width: 2px;
+        height: 100%;
+        background: white;
+        content: "";
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        transform: translateY(-100%);
+        transition: 0.3s;
+      }
+      .link-4:hover {
+        color: white;
+      }
+      .link-4:hover::before,
+      .link-4:hover::after {
+        transform: translateX(0);
+      }
+      .link-4:hover span::before,
+      .link-4:hover span::after {
+        transform: translateX(0);
+      }
     </style>
-</head>
-
-<body>
-    <div id="container">
-        <div id="title">Click to roll dice</div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.5.0/Tween.min.js"></script>
-    <script src="init.js"></script>
-    <script src="bundle.js"></script>
-</body>
-
+  </head>
+  <body class="bg-black">
+    <a href="#" class="link-4"><span>asd</span></a>
+  </body>
 </html>
