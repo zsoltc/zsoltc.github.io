@@ -73,7 +73,7 @@ var texLoader = new THREE.TextureLoader();
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({ antialias: true });
-var alternative = getParameterByName('alternative');
+var alternative = getParameterByName('alt');
 
 renderer.setSize(width, height);
 document.querySelector('#container').appendChild(renderer.domElement);
