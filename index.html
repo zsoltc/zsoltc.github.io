@@ -33,13 +33,21 @@
         font-size: 1rem;
       }
 
+      .links .title {
+        margin: 1rem;
+        font-size: 2rem;
+        text-decoration: underline;
+        color: var(--white);
+      }
+
       .links a {
         margin: 0.5rem;
+        font-size: 1.5rem;
       }
 
       .link-4 {
         text-decoration: none;
-        color: var(--silver);
+        color: var(--white);
         margin: 0 20px;
         padding: 10px;
         position: relative;
@@ -104,29 +112,30 @@
       }
 
       .link-5 {
-        padding: 0.25rem;
+        padding: 0.25rem 0.5rem;
         text-decoration: none;
-        color: var(--silver);
-        border: 1px solid;
-        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+        color: var(--white);
+        border: 1px solid var(--white);
+        box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0);
         outline: 1px solid;
         outline-color: rgba(255, 255, 255, 0.5);
-        outline-offset: 0px;
+        outline-offset: 0;
         text-shadow: none;
         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
       }
 
-      .link-5:hover {
-        border: 1px solid;
-        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+      .link-5:hover,
+      .link-5:active {
+        border: 1px solid var(--white);
+        box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0.5), 0 0 0.5rem rgba(255, 255, 255, 0.2);
         outline-color: rgba(255, 255, 255, 0);
-        outline-offset: 15px;
-        text-shadow: 1px 1px 2px #427388;
+        outline-offset: 0.5rem;
       }
     </style>
   </head>
   <body class="bg-olive">
     <div class="links">
+      <span class="title">Experiments</span>
       <a href="/8puzzle" class="link-5"><span>8-Puzzle</span></a>
       <a href="/chip8" class="link-5"><span>CHIP-8</span></a>
       <a href="/dice" class="link-5"><span>Dice</span></a>
