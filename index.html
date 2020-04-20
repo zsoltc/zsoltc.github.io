@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>typescript.hu</title>
     <script>
-      document.querySelector(":root").style["font-size"] = `${Math.max(16, Math.min(window.innerWidth / 20, 32))}px`;
+      (() => {
+        const resize = () => {
+          const fs = `${Math.max(16, Math.min(~~(window.innerWidth / 20), 32))}px`;
+          document.querySelector(":root").style["font-size"] = fs;
+        };
+        resize() || window.addEventListener("resize", resize);
+      })();
     </script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="colors.css" />
