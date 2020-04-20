@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-var width = Math.min(window.innerWidth, window.innerHeight);
+var width = Math.min(window.innerWidth, window.innerHeight - 20);
 var height = width;
 var texLoader = new THREE.TextureLoader();
 var scene = new THREE.Scene();
