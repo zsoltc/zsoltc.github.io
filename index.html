@@ -24,6 +24,7 @@
 
       body {
         font-family: "Roboto", sans-serif;
+        background: var(--md-blue-grey-600);
       }
 
       .links {
@@ -37,17 +38,19 @@
         margin: 1rem;
         font-size: 2rem;
         text-decoration: underline;
-        color: var(--white);
+        color: var(--md-white);
       }
 
       .links a {
+        width: 10rem;
         margin: 0.5rem;
         font-size: 1.5rem;
+        text-align: center;
       }
 
       .link-4 {
         text-decoration: none;
-        color: var(--white);
+        color: var(--md-white);
         margin: 0 20px;
         padding: 10px;
         position: relative;
@@ -58,7 +61,7 @@
       .link-4 span::before {
         width: 100%;
         height: 2px;
-        background: var(--white);
+        background: var(--md-white);
         content: "";
         position: absolute;
         left: 0;
@@ -69,7 +72,7 @@
       .link-4 span::after {
         width: 100%;
         height: 2px;
-        background: var(--white);
+        background: var(--md-white);
         content: "";
         position: absolute;
         right: 0;
@@ -80,7 +83,7 @@
       .link-4::before {
         width: 2px;
         height: 100%;
-        background: var(--white);
+        background: var(--md-white);
         content: "";
         position: absolute;
         left: 0;
@@ -91,7 +94,7 @@
       .link-4::after {
         width: 2px;
         height: 100%;
-        background: var(--white);
+        background: var(--md-white);
         content: "";
         position: absolute;
         right: 0px;
@@ -100,7 +103,7 @@
         transition: 0.3s;
       }
       .link-4:hover {
-        color: var(--white);
+        color: var(--md-white);
       }
       .link-4:hover::before,
       .link-4:hover::after {
@@ -114,9 +117,9 @@
       .link-5 {
         padding: 0.25rem 0.5rem;
         text-decoration: none;
-        color: var(--white);
-        border: 1px solid var(--white);
-        box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0);
+        color: var(--md-white);
+        border: 1px solid var(--md-white);
+        box-shadow: inset 0 0 1rem rgba(255, 255, 255, 0);
         outline: 1px solid;
         outline-color: rgba(255, 255, 255, 0.5);
         outline-offset: 0;
@@ -126,14 +129,14 @@
 
       .link-5:hover,
       .link-5:active {
-        border: 1px solid var(--white);
-        box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0.5), 0 0 0.5rem rgba(255, 255, 255, 0.2);
+        border: 1px solid var(--md-white);
+        box-shadow: inset 0 0 1rem rgba(255, 255, 255, 0.5), 0 0 1rem rgba(255, 255, 255, 0.2);
         outline-color: rgba(255, 255, 255, 0);
         outline-offset: 0.5rem;
       }
     </style>
   </head>
-  <body class="bg-olive">
+  <body>
     <div class="links">
       <span class="title">Experiments</span>
       <a href="/8puzzle" class="link-5"><span>8-Puzzle</span></a>
