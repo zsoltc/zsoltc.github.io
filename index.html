@@ -12,6 +12,12 @@
         };
         resize() || window.addEventListener("resize", resize);
       })();
+
+      try {
+        t.replace(/[a-zA-Z]/g, (c) =>
+          String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26)
+        );
+      } catch (e) {}
     </script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="colors.css" />
