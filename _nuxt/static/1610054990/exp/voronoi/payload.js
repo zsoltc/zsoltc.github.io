@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/exp/voronoi", {data:[{}],fetch:[],mutations:void 0});
