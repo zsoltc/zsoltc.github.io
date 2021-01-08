@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/exp/proctex", {data:[{}],fetch:[],mutations:void 0});
