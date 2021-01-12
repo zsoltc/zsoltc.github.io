@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/exp/shader", {data:[{}],fetch:[],mutations:void 0});

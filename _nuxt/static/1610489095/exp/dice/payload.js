@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/exp/dice", {data:[{}],fetch:[],mutations:void 0});
