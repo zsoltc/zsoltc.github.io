@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Generator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            font-size: min(1vw, 6px);
+        }
+
+        body {
+            background: #444;
+        }
+
+        #wrapper {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 100%;
+        }
+
+        #name {
+            color: #faa;
+            font-family: monospace;
+            font-size: 8rem;
+            margin-bottom: 8rem;
+        }
+
+        button {
+            background: #444;
+            border: 2px solid #eee;
+            color: #eee;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 6rem;
+            margin: 2rem;
+            height: 10rem;
+            width: 40rem;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="name"></div>
+        <div id="btns">
+            <button id="male-btn">Male</button>
+            <button id="female-btn">Female</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
