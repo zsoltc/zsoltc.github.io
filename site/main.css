@@ -30,6 +30,7 @@ nav {
     display: flex;
     position: fixed;
     width: 100%;
+    align-items: center;
     padding: 1rem 2rem;
 }
 
@@ -51,11 +52,10 @@ nav {
 
 .hamburger {
     position: relative;
-    width: 4rem;
-    height: 4rem;
-    font-size: 0.06666rem; /* UPDATE WHEN CHANGING WIDTH: increase or decrease with same percentage */
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.05rem; /* UPDATE WHEN CHANGING WIDTH: increase or decrease with same percentage */
     margin-left: auto;
-    align-self: center;
     cursor: pointer;
     transition-duration: 0.5s;
 }
