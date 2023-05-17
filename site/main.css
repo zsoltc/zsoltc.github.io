@@ -28,13 +28,11 @@ body {
 
 nav {
     display: flex;
-    position: fixed;
-    width: 100%;
+    position: sticky;
     max-width: 1024px;
     align-items: center;
     padding: 1rem 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
 }
 
 #logo {
