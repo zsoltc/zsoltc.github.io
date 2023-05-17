@@ -24,5 +24,15 @@
             <span>BlaBla Labs</span>
         </a>
     </nav>
+    <div class="hamburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+    </div>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

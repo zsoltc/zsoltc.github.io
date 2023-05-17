@@ -49,3 +49,77 @@ nav {
     font-size: 4rem;
     margin-left: 1rem;
 }
+
+.hamburger {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 100px;
+    left: 0px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.hamburger .icon-left {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    top: 30px;
+    background-color: #ddd;
+    left: 0px;
+}
+
+.hamburger .icon-right {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    top: 30px;
+    background-color: #ddd;
+    left: 30px;
+}
+
+.hamburger.open .icon-left, 
+.hamburger.open .icon-right {
+    transition-duration: 0.5s;
+    background: transparent;
+}
+
+.hamburger .icon-left:before,
+.hamburger .icon-right:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 8px;
+    background-color: #ddd;
+    content: "";
+    top: -20px;
+}
+
+.hamburger .icon-left:after,
+.hamburger .icon-right:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 8px;
+    background-color: #ddd;
+    content: "";
+    top: 20px;
+}
+
+.hamburger.open .icon-left:before {
+    transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+}
+
+.hamburger.open .icon-left:after {
+    transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+}
+
+.hamburger.open .icon-right:before {
+    transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+}
+
+.hamburger.open .icon-right:after {
+    transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+}
