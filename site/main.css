@@ -32,6 +32,7 @@ body {
 }
 
 nav {
+    display: flex;
     padding: 1rem;
 }
 
@@ -51,11 +52,10 @@ nav {
 }
 
 .hamburger {
-    position: absolute;
+    position: relative;
     width: 60px;
     height: 60px;
-    top: 100px;
-    left: 0px;
+    margin-left: auto;
     cursor: pointer;
     transition-duration: 0.5s;
 }
