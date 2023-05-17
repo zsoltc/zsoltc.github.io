@@ -50,12 +50,6 @@ nav {
     margin-left: 1rem;
 }
 
-@media only screen and (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-}
-
 .hamburger {
     position: relative;
     width: 3rem;
@@ -128,4 +122,32 @@ nav {
 
 .hamburger.open .icon-right:after {
     transform: rotateZ(45deg) scaleX(1.4) translate(-.4em, -.4em);
+}
+
+.menu {
+    display: none;
+    margin-left: auto;
+    font-size: 2rem;
+}
+
+.menu a:not(:last-of-type) {
+    margin-right: 3rem;
+}
+
+.menu a {
+    transition: color .3s;
+}
+
+.menu a:hover {
+    color: #ae001a;
+}
+
+@media only screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
 }
