@@ -30,8 +30,11 @@ nav {
     display: flex;
     position: fixed;
     width: 100%;
+    max-width: 1024px;
     align-items: center;
     padding: 1rem 2rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #logo {
@@ -44,7 +47,7 @@ nav {
     height: 5rem;
 }
 
-#logo span {
+#logo h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-left: 1rem;
