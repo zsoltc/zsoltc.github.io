@@ -22,7 +22,7 @@ a {
 /* </reset> */
 
 :root {
-    font-size: 62.5%; /* 10 px usually */
+    font-size: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -53,8 +53,9 @@ nav {
 
 .hamburger {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 4rem;
+    height: 4rem;
+    font-size: 0.06666rem; /* UPDATE WHEN CHANGING WIDTH: increase or decrease with same percentage */
     margin-left: auto;
     cursor: pointer;
     transition-duration: 0.5s;
@@ -63,21 +64,21 @@ nav {
 .hamburger .icon-left {
     transition-duration: 0.5s;
     position: absolute;
-    height: 8px;
-    width: 30px;
-    top: 30px;
+    height: 8em;
+    width: 30em;
+    top: 30em;
     background-color: #ddd;
-    left: 0px;
+    left: 0em;
 }
 
 .hamburger .icon-right {
     transition-duration: 0.5s;
     position: absolute;
-    height: 8px;
-    width: 30px;
-    top: 30px;
+    height: 8em;
+    width: 30em;
+    top: 30em;
     background-color: #ddd;
-    left: 30px;
+    left: 30em;
 }
 
 .hamburger.open .icon-left, 
@@ -90,36 +91,36 @@ nav {
 .hamburger .icon-right:before {
     transition-duration: 0.5s;
     position: absolute;
-    width: 30px;
-    height: 8px;
+    width: 30em;
+    height: 8em;
     background-color: #ddd;
     content: "";
-    top: -20px;
+    top: -20em;
 }
 
 .hamburger .icon-left:after,
 .hamburger .icon-right:after {
     transition-duration: 0.5s;
     position: absolute;
-    width: 30px;
-    height: 8px;
+    width: 30em;
+    height: 8em;
     background-color: #ddd;
     content: "";
-    top: 20px;
+    top: 20em;
 }
 
 .hamburger.open .icon-left:before {
-    transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+    transform: rotateZ(45deg) scaleX(1.4) translate(4em, 4em);
 }
 
 .hamburger.open .icon-left:after {
-    transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+    transform: rotateZ(-45deg) scaleX(1.4) translate(4em, -4em);
 }
 
 .hamburger.open .icon-right:before {
-    transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+    transform: rotateZ(-45deg) scaleX(1.4) translate(-4em, 4em);
 }
 
 .hamburger.open .icon-right:after {
-    transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+    transform: rotateZ(45deg) scaleX(1.4) translate(-4em, -4em);
 }
