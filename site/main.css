@@ -23,16 +23,19 @@ a {
 }
 
 body {
+    height: fit-content;
     background: #fafaf7;
 }
 
 nav {
     display: flex;
     position: sticky;
+    top: 0;
     max-width: 1024px;
     align-items: center;
     padding: 1rem 2rem;
     margin: auto;
+    background: #fafaf7;
 }
 
 #logo {
@@ -151,4 +154,19 @@ nav {
     .menu {
         display: block;
     }
+}
+
+main {
+    margin: auto;
+    padding: 2rem 2rem;
+    max-width: 1024px;
+    font-size: 2rem;
+}
+
+footer {
+    background: #161b22;
+    color: #7d8590;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 4rem 0;
 }
