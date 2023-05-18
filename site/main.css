@@ -67,6 +67,10 @@ header > div:nth-child(1) {
     transform: scaleY(1);
 }
 
+.nav-wrapper > nav > a {
+    margin-bottom: 1rem;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -167,11 +171,13 @@ header > div:nth-child(1) {
     margin-right: 3rem;
 }
 
-.menu a {
+.menu a,
+.nav-wrapper > nav > a {
     transition: color .3s;
 }
 
-.menu a:hover {
+.menu a:hover,
+.nav-wrapper > nav > a:hover {
     color: #ae001a;
 }
 

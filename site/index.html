@@ -62,10 +62,16 @@
         const hamburger = document.querySelector('.hamburger');
         const navSm = document.querySelector('.nav-wrapper > nav');
 
-        hamburger.addEventListener('click', () => {
+        function toggleMenu() {
             hamburger.classList.toggle('open');
             navSm.classList.toggle('open');
-        });
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        for (let el of navSm.children) {
+            el.addEventListener('click', toggleMenu);
+        }
     </script>
 </body>
 </html>
