@@ -31,15 +31,18 @@ body {
 }
 
 header {
-    display: flex;
-    flex-wrap: wrap;
     position: sticky;
     top: 0;
+    background: #fafaf7;
+}
+
+header > div:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 1024px;
     align-items: center;
     padding: 1rem 2rem;
     margin: auto;
-    background: #fafaf7;
 }
 
 .nav-wrapper {
@@ -64,17 +67,17 @@ header {
     transform: scaleY(1);
 }
 
-#logo {
+.logo {
     display: flex;
     align-items: center;
 }
 
-#logo > svg {
+.logo > svg {
     width: 5rem;
     height: 5rem;
 }
 
-#logo > h1 {
+.logo > h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-left: 1rem;
